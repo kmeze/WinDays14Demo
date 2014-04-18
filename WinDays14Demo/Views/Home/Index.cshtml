@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+@using WinDays14Demo.Models
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WinDays Demo</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="~/Content/head.png" />
+        </header>
+        <div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Speaker speaker in ViewBag.Speakers)
+                    {
+                        <tr>
+                            <td>@speaker.FirstName</td>
+                            <td>@speaker.LastName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
